@@ -23,7 +23,7 @@ def test_postgres_is_alive_psycopg():
 
 def test_postgres_is_alive_sqlmodel():
     with Session(engine) as session:
-        result = session.exec(text("SELECT 1"))
+        result = session.execute(text("SELECT 1"))
         row = result.one()
 
         assert row[0] == 1
