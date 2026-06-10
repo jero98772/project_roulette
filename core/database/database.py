@@ -1,7 +1,10 @@
 from sqlmodel import SQLModel, create_engine, Session
-from core.settings import DATABASE_URL
+from core.settings.default import AppSettings
 
-engine = create_engine(DATABASE_URL, echo=True)
+
+settings = AppSettings()
+
+engine = create_engine(settings.db_url, echo=True)
 
 
 def create_tables():
