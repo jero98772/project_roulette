@@ -2,14 +2,15 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from core.database.crud import create_database_if_not_exists
 from core.settings.default import AppSettings, setup_logging
+from core.routers import api_router
 
 app = FastAPI()
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    settings: AppSettings = app.state.settings
     try:
-        settings = AppSettings()
         setup_logging(settings)
         create_database_if_not_exists(settings)
         yield
@@ -31,17 +32,10 @@ def boostrap(settings: AppSettings | None = None) -> FastAPI:
         docs_url=settings.DOCS_URL,
         redoc_url=settings.REDOCS_URL,
     )
+    app.state.settings = settings
+    app.include_router(api_router)
+
     return app
 
 
 app = boostrap()
-
-
-@app.get("/")
-async def hello_world():
-    return {"message": "Hello, World!"}
-
-
-@app.get("/health")
-async def health():
-    return {"status": "healthy"}

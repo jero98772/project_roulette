@@ -1,15 +1,17 @@
 import psycopg
 from sqlmodel import Session, text
 from core.database.database import engine
+from core.settings.default import AppSettings
 
 
 def test_postgres_is_alive_psycopg():
+    settings = AppSettings()
     conn = psycopg.connect(
-        host="localhost",
-        port=5433,
-        dbname="postgres",
-        user="postgres",
-        password="postgres",
+        host=settings.DB_HOST,
+        port=settings.DB_PORT,
+        dbname=settings.DB_NAME,
+        user=settings.DB_USER,
+        password=settings.DB_PASSWORD,
     )
 
     with conn.cursor() as cur:

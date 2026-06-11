@@ -61,6 +61,7 @@ class Project(SQLModel, table=True):
     __tablename__ = "projects"
 
     id: Optional[int] = Field(default=None, primary_key=True)
+    description: Optional[str] = Field(default=None, max_length=500)
     programming_language_id: int = Field(
         foreign_key="project_programming_languages.id", nullable=False
     )

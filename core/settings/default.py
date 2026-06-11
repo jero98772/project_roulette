@@ -20,8 +20,8 @@ class AppSettings(BaseSettings):
     DB_USER: str = "postgres"
     DB_PASSWORD: str = "postgres"
     DB_HOST: str = "localhost"
-    DB_PORT: str = "5432"
-    DB_NAME: str = "test_sqlmodel21412"
+    DB_PORT: str = "5433"
+    DB_NAME: str = "project_roulette_db"
 
     # PRINT LOGS
     ENABLE_LOGS: bool = True

@@ -23,8 +23,9 @@ def create_database_if_not_exists(settings: AppSettings) -> None:
         password=settings.DB_PASSWORD,
         host=settings.DB_HOST,
         port=settings.DB_PORT,
-        database=settings.DB_NAME,
+        database="postgres",
     )
+    logger.info("Connecting to postgress database")
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cursor = conn.cursor()
     exists = database_exists(cursor, settings.DB_NAME)
