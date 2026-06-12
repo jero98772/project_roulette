@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from core.database.crud import create_database_if_not_exists
+from core.database.database import init_db
 from core.settings.default import AppSettings, setup_logging
 from core.routers import api_router
 
@@ -12,7 +12,7 @@ async def lifespan(app: FastAPI):
     settings: AppSettings = app.state.settings
     try:
         setup_logging(settings)
-        create_database_if_not_exists(settings)
+        init_db()
         yield
 
     finally:

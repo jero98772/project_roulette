@@ -1,4 +1,5 @@
 from typing import Optional
+
 from sqlmodel import Field, Relationship, SQLModel
 
 
@@ -8,7 +9,6 @@ class ProjectProgrammingLanguage(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     name: str = Field(nullable=False, unique=True)
 
-    # Relationships
     projects: list["Project"] = Relationship(back_populates="programming_language")
     extras: list["ProjectExtra"] = Relationship(back_populates="programming_language")
 
@@ -19,7 +19,6 @@ class ProjectTech(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     name: str = Field(nullable=False, unique=True)
 
-    # Relationships
     projects: list["Project"] = Relationship(back_populates="tech")
     extras: list["ProjectExtra"] = Relationship(back_populates="tech")
 
@@ -30,7 +29,6 @@ class ProjectAddon(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     name: str = Field(nullable=False, unique=True)
 
-    # Relationships
     projects: list["Project"] = Relationship(back_populates="addon")
     extras: list["ProjectExtra"] = Relationship(back_populates="addon")
 
@@ -48,7 +46,6 @@ class ProjectExtra(SQLModel, table=True):
     )
     projects_id: int = Field(foreign_key="projects.id", nullable=False)
 
-    # Relationships
     programming_language: Optional[ProjectProgrammingLanguage] = Relationship(
         back_populates="extras"
     )
@@ -65,15 +62,12 @@ class Project(SQLModel, table=True):
     programming_language_id: int = Field(
         foreign_key="project_programming_languages.id", nullable=False
     )
-    project_tech_id: Optional[int] = Field(default=None, foreign_key="project_techs.id")
-    project_addon_id: Optional[int] = Field(
-        default=None, foreign_key="project_addons.id"
-    )
+    project_tech_id: int = Field(default=None, foreign_key="project_techs.id")
+    project_addon_id: int = Field(default=None, foreign_key="project_addons.id")
 
-    # Relationships
     programming_language: Optional[ProjectProgrammingLanguage] = Relationship(
         back_populates="projects"
     )
-    tech: Optional[ProjectTech] = Relationship(back_populates="projects")
-    addon: Optional[ProjectAddon] = Relationship(back_populates="projects")
+    tech: ProjectTech = Relationship(back_populates="projects")
+    addon: ProjectAddon = Relationship(back_populates="projects")
     extras: list[ProjectExtra] = Relationship(back_populates="project")

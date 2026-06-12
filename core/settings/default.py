@@ -17,6 +17,7 @@ class AppSettings(BaseSettings):
     REDOCS_URL: str = "/api/redocs"
 
     # DATA BASE SETTINGS
+    DATA_YALM: str = "data/data.yaml"
     DB_USER: str = "postgres"
     DB_PASSWORD: str = "postgres"
     DB_HOST: str = "localhost"
