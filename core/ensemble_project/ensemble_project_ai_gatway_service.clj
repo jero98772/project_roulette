@@ -1,12 +1,5 @@
 (ns core.ensemble-project.ensemble-project-ai-gatway-service
-  "Clojure counterpart of
-   core.ensemble_project.ensemble_project_ai_gatway_service.ProjectGeneratorAIGateway.
 
-   Every public function here is deliberately string-in / string-out
-   (host + model as plain strings, everything else as JSON) so it can be
-   invoked directly from Python over jpype without hand-converting Python
-   dict/list objects into Clojure maps/vectors and back. See
-   core/settings/clojure_settings.py for the Python-side bridge."
   (:require [core.ai-gateway.ollama-provider :as ollama]
             [cheshire.core :as json]
             [clojure.string :as str]))
@@ -85,13 +78,6 @@
    "Plain text only – no lists, no markdown."))
 
 (defn choose-valid-project
-  "host, model: plain strings identifying the Ollama server/model.
-   projects-json: a JSON array of project maps (same shape the Python
-   ProjectGeneratorAIGateway.choose_valid_project receives).
-
-   Returns a JSON string: {\"best_index\": int, \"valid\": bool, \"reason\": string|null}
-   — the same fields as the Python ProjectSelection model, so the Python
-   bridge can do ProjectSelection(**json.loads(result)) directly."
   [^String host ^String model ^String projects-json]
   (let [projects (json/parse-string projects-json)
         prompt   (build-candidates-prompt projects)
@@ -108,11 +94,7 @@
     (json/generate-string result)))
 
 (defn generate-description
-  "host, model: plain strings identifying the Ollama server/model.
-   project-json: a JSON object describing a single project (same shape the
-   Python ProjectGeneratorAIGateway.generate_description receives).
 
-   Returns a plain-text description string."
   [^String host ^String model ^String project-json]
   (let [project (json/parse-string project-json)
         prompt  (build-description-prompt project)

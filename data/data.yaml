@@ -122,6 +122,164 @@ techs:
   - Knowledge Graph
   - Workflow Engine
   - Rule Engine
+  - Large Language Model (LLM)
+  - Small Language Model (SLM)
+  - Vision Language Model (VLM)
+  - Multimodal Model
+  - Text-to-Image Model
+  - Text-to-Video Model
+  - Text-to-Audio Model
+  - Speech-to-Text Model
+  - Text-to-Speech Model
+  - Image-to-Image Model
+  - Image Captioning Model
+  - Embedding Model
+  - Reranker Model
+  - Reward Model
+  - Reasoning Model
+  - Code Generation Model
+  - Function Calling Model
+  - Agentic Model
+  - Diffusion Model
+  - Latent Diffusion Model
+  - Flow Matching Model
+  - Consistency Model
+  - Autoregressive Model
+  - Masked Language Model
+  - Sequence-to-Sequence Model
+  - Encoder-Only Model
+  - Decoder-Only Model
+  - Encoder-Decoder Model
+  - Transformer
+  - Vision Transformer (ViT)
+  - State Space Model (SSM)
+  - Mamba Model
+  - Recurrent Neural Network (RNN)
+  - Long Short-Term Memory (LSTM)
+  - Gated Recurrent Unit (GRU)
+  - Convolutional Neural Network (CNN)
+  - Graph Neural Network (GNN)
+  - Graph Transformer
+  - Capsule Network
+  - Spiking Neural Network
+  - Neural Radiance Field (NeRF)
+  - Mixture of Experts (MoE)
+  - Sparse Mixture of Experts
+  - Mixture of Depths
+  - Variational Autoencoder (VAE)
+  - Autoencoder
+  - Denoising Autoencoder
+  - Sparse Autoencoder
+  - Vector Quantized VAE (VQ-VAE)
+  - Generative Adversarial Network (GAN)
+  - Wasserstein GAN
+  - Conditional GAN
+  - Energy-Based Model
+  - Boltzmann Machine
+  - Restricted Boltzmann Machine
+  - Hopfield Network
+  - Bayesian Network
+  - Hidden Markov Model (HMM)
+  - Gaussian Process
+  - Normalizing Flow
+  - Diffusion Transformer (DiT)
+  - World Model
+  - Foundation Model
+  - Foundation Vision Model
+  - Language-Vision Model
+  - Retrieval-Augmented Generation (RAG)
+  - Agentic RAG
+  - Graph RAG
+  - Multimodal RAG
+  - Memory-Augmented Model
+  - Retrieval Model
+  - Ranking Model
+  - Cross Encoder
+  - Bi-Encoder
+  - Dual Encoder
+  - Contrastive Learning Model
+  - Self-Supervised Model
+  - Supervised Learning Model
+  - Unsupervised Learning Model
+  - Semi-Supervised Learning Model
+  - Reinforcement Learning Model
+  - Reinforcement Learning from Human Feedback (RLHF)
+  - Reinforcement Learning from AI Feedback (RLAIF)
+  - Online Learning Model
+  - Federated Learning Model
+  - Meta-Learning Model
+  - Few-Shot Learning Model
+  - Zero-Shot Learning Model
+  - One-Shot Learning Model
+  - Continual Learning Model
+  - Active Learning Model
+  - Multi-Task Learning Model
+  - Transfer Learning Model
+  - Distilled Model
+  - Quantized Model
+  - Pruned Model
+  - LoRA Adapter
+  - Prompt-Tuned Model
+  - Prefix-Tuned Model
+  - Instruction-Tuned Model
+  - Chat Model
+  - Planning Model
+  - Tool-Using Model
+  - Vision Model
+  - Object Detection Model
+  - Instance Segmentation Model
+  - Semantic Segmentation Model
+  - Pose Estimation Model
+  - Face Recognition Model
+  - OCR Model
+  - Image Classification Model
+  - Image Generation Model
+  - Video Generation Model
+  - Speech Recognition Model
+  - Speaker Recognition Model
+  - Recommendation Model
+  - Time Series Forecasting Model
+  - Anomaly Detection Model
+  - Clustering Model
+  - Regression Model
+  - Decision Tree
+  - Random Forest
+  - Gradient Boosting Model
+  - XGBoost Model
+  - LightGBM Model
+  - CatBoost Model
+  - Support Vector Machine (SVM)
+  - Naive Bayes Classifier
+  - K-Nearest Neighbors (KNN)
+  - Logistic Regression
+  - Linear Regression
+  - Matrix Factorization Model
+  - Factorization Machine
+  - Analyze a Kaggle Dataset
+  - Build an ETL Pipeline
+  - Clean a Real-World Dataset
+  - Create an Interactive Dashboard
+  - Build a Machine Learning Model
+  - Compare Machine Learning Models
+  - Hyperparameter Optimization
+  - Deploy a Prediction API
+  - Create a Business Intelligence Report
+  - Build a Recommendation System
+  - Train a Deep Learning Model
+  - Fine-Tune a Foundation Model
+  - Perform Time Series Forecasting
+  - Build a Fraud Detection System
+  - Build a Customer Segmentation Pipeline
+  - Build a Customer Churn Predictor
+  - Build a Credit Risk Model
+  - Build a Disease Prediction System
+  - Build a Medical Image Classifier
+  - Build an OCR Pipeline
+  - Build an Object Detection System
+  - Build a Sentiment Analysis System
+  - Build a Stock Prediction Model
+  - Build a Real-Time Analytics Dashboard
+  - Build an End-to-End Data Science Project
 
 addons:
   - Authentication
@@ -520,3 +678,102 @@ addons:
   - Agent
   - Chain of Thought
   - Retrieval Augmented Generation (RAG)
+    - Data Cleaning
+  - Data Preprocessing
+  - Data Wrangling
+  - Exploratory Data Analysis (EDA)
+  - Feature Engineering
+  - Feature Selection
+  - Data Visualization
+  - Dashboard Development
+  - Business Intelligence Dashboard
+  - Statistical Analysis
+  - A/B Testing
+  - Hypothesis Testing
+  - Time Series Analysis
+  - Time Series Forecasting
+  - Regression Analysis
+  - Classification
+  - Clustering
+  - Dimensionality Reduction
+  - Recommendation System
+  - Anomaly Detection
+  - Outlier Detection
+  - Fraud Detection
+  - Credit Card Fraud Detection
+  - Credit Risk Assessment
+  - Loan Default Prediction
+  - Insurance Claim Prediction
+  - Bankruptcy Prediction
+  - Customer Segmentation
+  - Customer Churn Prediction
+  - Customer Lifetime Value Prediction
+  - Market Basket Analysis
+  - Sales Forecasting
+  - Demand Forecasting
+  - Inventory Optimization
+  - Price Prediction
+  - Dynamic Pricing
+  - House Price Prediction
+  - Stock Market Analysis
+  - Stock Price Prediction
+  - Cryptocurrency Price Prediction
+  - Financial Risk Analysis
+  - Sentiment Analysis
+  - Topic Modeling
+  - Spam Detection
+  - Fake News Detection
+  - Text Classification
+  - Machine Translation
+  - Document Classification
+  - Resume Screening
+  - Medical Diagnosis
+  - Disease Prediction
+  - Medical Image Classification
+  - Medical Image Segmentation
+  - Tumor Detection
+  - Skin Cancer Detection
+  - Pneumonia Detection
+  - ECG Analysis
+  - DNA Sequence Analysis
+  - Drug Discovery
+  - Protein Structure Prediction
+  - Object Detection
+  - Image Classification
+  - Image Segmentation
+  - Face Recognition
+  - Face Verification
+  - Face Emotion Recognition
+  - OCR
+  - Pose Estimation
+  - Video Classification
+  - Activity Recognition
+  - Speech Recognition
+  - Speaker Identification
+  - Audio Classification
+  - Music Recommendation
+  - Predictive Maintenance
+  - Fault Detection
+  - Quality Inspection
+  - Supply Chain Optimization
+  - Route Optimization
+  - Traffic Prediction
+  - Energy Consumption Forecasting
+  - Weather Prediction
+  - Climate Analysis
+  - Air Quality Prediction
+  - Water Quality Prediction
+  - Crop Yield Prediction
+  - Plant Disease Detection
+  - Wildlife Classification
+  - Earthquake Prediction
+  - Social Network Analysis
+  - Knowledge Graph Construction
+  - Graph Analytics
+  - Network Intrusion Detection
+  - Malware Detection
+  - Cyber Threat Detection
+  - Kaggle Competition Solution
+  - Data Storytelling
+  - Interactive Dashboard
+  - Executive Dashboard
